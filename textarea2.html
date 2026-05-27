@@ -1,0 +1,16 @@
+<head><title>Tali's Text Tidier</title>
+<script>
+function RemoveLineBreaks() {
+            thetext = document.getElementById("thetextarea").value;
+            // Run this a limited number of times to change double-line breaks to singles, but prevent infinite loop
+thetext = thetext.replace(/\n/g,' ');
+            for (let step = 0; step < 100; step++) {
+                        
+thetext = thetext.replace(/  /g,' ');
+            }
+            //thetext = thetext.replace(/\n/g,' ');
+            document.getElementById("thetextarea").value = thetext;
+            //alert (thetext);
+}
+</script>
+<form id=theform><input type=button value="Remove line breaks" onclick="RemoveLineBreaks()"><BR><textarea id=thetextarea rows=20 cols=80></textarea></form>
