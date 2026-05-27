@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>Stoic Virtue of the Day</title>
+<style>
+table {
+  border-collapse: collapse;
+}
+
+table, td, th {
+  border: 1px solid black;
+  padding: 15px;
+}
+</style>
+<script>
+
+// Everything between START and END is generated. Do not change it manually.
+// START
+var wordArr = [
+"Focus on what you can control",
+"You control your reactions",
+"Ask yourself, 'Is this essential?'",
+"Meditate on your mortality",
+"Value time & experience over money or possessions",
+"You have the power to have no opinion",
+"Own the morning",
+"Interrogate yourself -- understand your motivations!",
+"Do not suffer imagined troubles",
+"Look for the good in everyone",
+"Don't be overheard complaining",
+"2 ears, 1 mouth -- for a reason!",
+"There's always something you can do",
+"Don't compare yourself to others",
+"Live as if you've just died and come back to life",
+"The best revenge is to not be like that",
+"Be strict with yourself and tolerant with others",
+"Test every emotion before acting",
+"Learn from everything",
+"Focus on Process over Outcome",
+"Define what 'happiness' means to you",
+"Learn to love everything that happens",
+"Seek out challenges",
+"Avoid the mob",
+"Use the smooth handle - look for the kinder, gentler way to handle interactions.",
+"Everyone is an opportunity for kindness",
+"Say 'NO' a lot",
+"Don't be afraid to ask for help",
+"Find something every day that makes you wiser",
+"What's bad for the hive is bad for the bee",
+"Don't judge others",
+"Study the lives of the greats",
+"Forgive, forgive, forgive",
+"Make a little progress every day",
+"Journal",
+"Prepare for life's inevitable setbacks",
+"Look for the poetry of ordinary things",
+"What harms others, harms oneself",
+"Always choose 'alive time' (https://ryanholiday.net/will-you-choose-alive-time-or-dead-time/)",
+"Surround yourself with people that make you better",
+"If you take offense, you are complicit in being offended",
+"The fates do as they please",
+"Possesions are yours in trust",
+"Don't make the situation worse by bemoaning it",
+"Accept victory with humility, defeat with indifference",
+"Courage, Temperance, Justice, Wisdom",
+"The Obstacle is The Way",
+"Ego is The Enemy",
+"Stillness is The Key",
+"Don't Talk About It, Be About It",
+"Whenever possible, use the right tool for the job; if you don't have it, consider building it",
+"DUMMY"];
+
+function rand(min, max) { // min and max included 
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+
+function ChooseNewWords() {
+	item = document.getElementById("words");
+	
+	words = ""
+	
+	for (var i = 0; i < 1; i++) {
+		do {
+			word = rand(0, wordArr.length - 2); // 2 to drop the "DUMMY" word
+			//word = rand(0, 10); // for debugging, just look at first 11 words in list
+		} while (words.indexOf(wordArr[word]) > -1)
+		words = words + wordArr[word] + "<BR><BR>";
+	}
+	
+	item.innerHTML = words;
+}
+
+
+
+</script>
+</head>
+<body>
+
+<!-- <h1>Think about this today:</h1> -->
+<h2><div id="words"></div></h2>
+<!--
+<form action="javascript:void()">
+<input type=button value="Choose a new value" onClick="ChooseNewWords()">
+</form>
+-->
+<script>ChooseNewWords();</script>
+
+
+</html>
